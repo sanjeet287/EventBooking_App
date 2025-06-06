@@ -1,0 +1,15 @@
+server:
+  port: 8082
+stripe:
+  apiKey: YOUR_SECRET_KEY
+logging:
+  level:
+    com.eventbooking.payment: DEBUG
+  file:
+    name: logs/payment-service.log
+
+rabbitmq:
+ payment:
+   exchange: payment.exchange
+ queue: payment.queue
+routing-key: payment.initiate
